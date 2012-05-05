@@ -17,4 +17,4 @@ The version 1.0 has been synchronized to Maven Central Repository.
 
 The version 1.x needs zookeeper 3.3.x.
 
-The version [2.x](https://github.com/adyliu/zookeeper/tree/v2.0) needs zookeeper 3.4.x.
+The version [2.x](https://github.com/adyliu/zkclient/tree/v2.0) needs zookeeper 3.4.x.
