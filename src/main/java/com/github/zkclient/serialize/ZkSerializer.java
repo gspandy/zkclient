@@ -18,15 +18,30 @@ package com.github.zkclient.serialize;
 import com.github.zkclient.exception.ZkMarshallingError;
 
 /**
- * Zookeeper is able to store data in form of byte arrays. This interfacte is a bridge between those byte-array format
- * and higher level objects.
+ * Zookeeper is able to store data in form of byte arrays. This interfacte is a bridge between
+ * those byte-array format and higher level objects.
  * 
  * @see BytesPushThroughSerializer
  * @see SerializableSerializer
+ * @see StringSerializer
  */
 public interface ZkSerializer {
 
-    public byte[] serialize(Object data) throws ZkMarshallingError;
+    /**
+     * serialize object to byte arrays
+     * 
+     * @param data object
+     * @return byte arrays
+     * @throws ZkMarshallingError
+     */
+    byte[] serialize(Object data) throws ZkMarshallingError;
 
-    public Object deserialize(byte[] bytes) throws ZkMarshallingError;
+    /**
+     * convert byte arrays to object
+     * 
+     * @param bytes byte arrays
+     * @return object
+     * @throws ZkMarshallingError
+     */
+    Object deserialize(byte[] bytes) throws ZkMarshallingError;
 }
